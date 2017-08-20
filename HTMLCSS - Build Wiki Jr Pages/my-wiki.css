@@ -1,0 +1,13 @@
+html {
+  /*background-color: lightgray;*/
+  background-image: url(/images/textures/light5.png);
+  color: navy;
+}
+
+h1 {
+  color: gray;
+  }
+  
+h2 {
+  color: black;
+  }  
