@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<title>Xylophone app</title>
+
+<!--<link rel="stylesheet" href="/css/profile1.css">-->
+
+<style>
+  button {
+    height: 60px;
+    width: 100%;
+  }
+  
+</style>
+
+<button style="background: darkBlue;" id="cButton"></button>
+<button style="background: blue;" id="dButton"></button>
+<button style="background: teal;" id="eButton"></button>
+<button style="background: green;" id="fButton"></button>
+<button style="background: yellow;" id="gButton"></button>
+<button style="background: orange;" id="aButton"></button>
+<button style="background: red;" id="bButton"></button>
+<button style="background: darkRed" id="cButton"></button>
+
+<script src="/js/tones.js"></script>
+
+<!--<script>tones.play("c")</script>-->
+
+<script>
+
+cButton.onclick = play("c", "e");
+dButton.onclick = play("d", "f");
+eButton.onclick = play("e");
+fButton.onclick = play("f");
+
+gButton.onclick = play("g");
+aButton.onclick = play("a");
+bButton.onclick = play("b");
+cButton.onclick = play("c", 5);
+
+  function play(a, b = "") {
+    tones.play(a);
+    tones.play(b);
+  }
+</script>

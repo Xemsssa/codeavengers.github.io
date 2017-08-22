@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<title>Xylophone app</title>
+
+<!--<link rel="stylesheet" href="/css/profile1.css">-->
+
+<style>
+  button {
+    height: 60px;
+    width: 100%;
+  }
+  
+</style>
+
+<button style="background: darkBlue;" id="cButton"></button>
+<button style="background: blue;" id="dButton"></button>
+<button style="background: teal;" id="eButton"></button>
+<button style="background: green;" id="fButton"></button>
+<button style="background: yellow;" id="gButton"></button>
+<button style="background: orange;" id="aButton"></button>
+<button style="background: red;" id="bButton"></button>
+<button style="background: darkRed" id="c5Button"></button>
+
+<script src="/js/tones.js"></script>
+
+<!--<script>tones.play("c")</script>-->
+
+<script>
+  // function play(a, b) {
+  //   tones.play(a);
+  //   tones.play(b);
+  // }
+  
+  cButton.onclick= function () {
+    tones.play('c');
+    tones.play('e');
+  }
+  dButton.onclick = function () {
+    tones.play('d');
+    tones.play('f');
+  }
+  
+  eButton.onclick = function () {
+    tones.play('e');
+    tones.play('g');
+  }
+  
+  fButton.onclick= function () {
+    tones.play('f');
+    tones.play('a');
+  }
+  gButton.onclick = function () {
+    tones.play('g');
+    tones.play('b');
+  }
+  
+  aButton.onclick= function () {
+    tones.play('a');
+    tones.play('c', 5);
+  }
+  bButton.onclick = function () {
+    tones.play('b');
+    tones.play('d', 5);
+  }
+  
+  c5Button.onclick= function () {
+    tones.play('c', 5);
+    tones.play('e', 5);
+  }
+ 
+  // function playCE() {
+  //   tones.play('c');
+  //   tones.play('e');
+  // }
+  
+  // function playDF() {
+  //   tones.play('d');
+  //   tones.play('f');
+  // }
+  
+</script>

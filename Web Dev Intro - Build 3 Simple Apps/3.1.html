@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<title>Xylophone app</title>
+
+<!--<link rel="stylesheet" href="/css/profile1.css">-->
+
+<style>
+  button {
+    height: 60px;
+    width: 100%;
+  }
+  
+</style>
+
+<button style="background: darkBlue;" onclick="tones.play('c'); tones.play('e')"></button>
+<button style="background: blue;" onclick="tones.play('d'); tones.play('f')"></button>
+<button style="background: teal;" onclick="tones.play('e')"></button>
+<button style="background: green;" onclick="tones.play('f')"></button>
+<button style="background: yellow;" onclick="tones.play('g')"></button>
+<button style="background: orange;" onclick="tones.play('a')"></button>
+<button style="background: red;" onclick="tones.play('b')"></button>
+<button style="background: darkRed" onclick="tones.play('c', 5)"></button>
+
+<script src="/js/tones.js"></script>
+
+<script>tones.play("c")</script>
