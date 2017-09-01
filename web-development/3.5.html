@@ -1,0 +1,33 @@
+<!doctype html>
+<title>Buttons</title>
+
+<style>
+button {
+  font-size: 28px;
+}
+</style>
+
+<button id="pinkButton">Pink</button>
+<button id="orangeButton">Orange</button>
+
+<script>
+function makeBackgroundPink() {
+  document.body.style.backgroundColor = 'pink';
+}
+
+function makeBackgroundOrange() {
+  document.body.style.backgroundColor = 'orange';
+}
+
+function clearBackground() {
+  document.body.style.backgroundColor = '';
+}
+
+// pinkButton.onclick = makeBackgroundPink;
+pinkButton.onmouseover = makeBackgroundPink;
+pinkButton.onmouseout = clearBackground;
+// orangeButton.onclick = makeBackgroundOrange;
+orangeButton.onmouseover = makeBackgroundOrange;
+orangeButton.onmouseout = clearBackground;
+
+</script>

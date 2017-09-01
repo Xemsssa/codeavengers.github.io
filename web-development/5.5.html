@@ -1,0 +1,24 @@
+<!doctype html>
+<title>JavaScript Bugs</title>
+
+<button id="increaseFontSizeButton">Increase font size</button>
+<button id="decreaseFontSizeButton">Decrease font size</button>
+
+<p>Click the buttons and see the font size change!
+
+<script>
+var fontSize = 14;
+
+function increaseFontSize() {
+  fontSize += 4;
+  document.body.style.fontSize = fontSize + 'px';
+}
+
+function decreaseFontSize() {
+  fontSize -= 4;
+  document.body.style.fontSize = fontSize + 'px';
+}
+
+increaseFontSizeButton.onclick = increaseFontSize;
+decreaseFontSizeButton.onclick = decreaseFontSize;
+</script>

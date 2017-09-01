@@ -1,0 +1,24 @@
+<!doctype html>
+<title>JavaScript Bugs</title>
+
+<style>
+body {
+  background-color: yellow;  
+}
+</style>
+
+<button id="blueButton">Go Blue</button>
+<button id="pinkButton">Go Pink</button>
+
+<script>
+function goBlue() {
+  document.body.style.backgroundColor = 'blue';
+}
+
+function goPink() {
+  document.body.style.backgroundColor = 'pink';
+}
+
+blueButton.onclick = goBlue;
+pinkButton.onclick = goPink;
+</script>
