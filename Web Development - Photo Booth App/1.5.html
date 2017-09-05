@@ -1,0 +1,103 @@
+<!doctype html>
+<title>PhotoBooth</title>
+
+<link rel="stylesheet" href="/css/avengers-booth.css">
+
+<style>
+.title {
+  background-color: lightGray;
+  color: dodgerBlue;
+}
+</style>
+
+<h1 class="title">PhotoBooth</h1>
+<!-- Code for the photo window and camera buttons -->
+<div class="image">
+  <div class="image_camera">
+    <video id="camera" autoplay></video>
+    <div class="overlay-left"></div>
+    <div class="overlay-right"></div>
+  </div>
+  <div class="canvas-wrapper"> 
+    <canvas id="canvas" class="image_canvas"></canvas>
+  </div>
+  <div class="image_buttons">
+    <span class="button-left"></span>
+    <span class="button-center" onclick="cameraButton()"></span>
+    <span class="button-right"></span>
+  </div></div>
+
+<!-- Code for adding an existing photo -->
+<div class="popup">
+  <h3 class="popup_header">Choose an image URL to upload to the app.</h3>
+  <input class="popup_input" name="image" placeholder="Image URL">
+  <button class="popup_button">Add Image</button>
+</div>
+
+<!-- Code for the filter buttons -->
+<div class="bar">
+  <span onclick="addFilter(1)" class="filter">
+    <canvas data-filter="1"></canvas>
+  </span>
+  <span onclick="addFilter(1)" class="filter">
+    <canvas data-filter="1"></canvas>
+  </span>
+  <span onclick="addFilter(1)" class="filter">
+    <canvas data-filter="1"></canvas>
+  </span>
+  <span onclick="addFilter(1)" class="filter">
+    <canvas data-filter="1"></canvas>
+  </span>
+</div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/avengers-booth.js"></script>
+
+
+
+
+<!--OLD CODE
+
+<!doctype html>
+<title>PhotoBooth</title>
+
+<link rel="stylesheet" href="/css/avengers-booth.css">
+
+<style>
+.title {
+  background-color: lightGray;
+  color: dodgerBlue;
+}
+</style>
+
+<h1 class="title">PhotoBooth</h1>
+
+<div class="image">
+  <div class="image_camera">
+    <video id="camera" autoplay></video>
+    <div class="overlay-left"></div>
+    <div class="overlay-right"></div>
+  </div>
+  <div class="canvas-wrapper"> 
+    <canvas id="canvas" class="image_canvas"></canvas>
+  </div>
+  <div class="image_buttons">
+    <span class="button-left"></span>
+    <span class="button-center" onclick="cameraButton()"></span>
+    <span class="button-right"></span>
+  </div></div>
+
+
+<div class="popup">
+  <h3 class="popup_header">Choose an image URL to upload to the app.</h3>
+  <input class="popup_input" name="image" placeholder="Image URL">
+  <button class="popup_button">Add Image</button>
+</div>
+
+
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/avengers-booth.js"></script>
+
+-->
