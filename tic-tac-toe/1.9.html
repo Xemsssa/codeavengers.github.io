@@ -1,0 +1,134 @@
+<!doctype html>
+
+<title>Tic-Tac-Toe</title>
+
+<link rel="stylesheet" href="/css/profile1.css" title="" type="text/css" />
+
+<style type="text/css" media="all">
+  button {
+    font-size: 60px;
+    height: 100px;
+    margin: 4px 2px;
+    vertical-align: top;
+    width: 100px;
+  }
+  
+  p {
+    margin: 4px 2px;
+    font-size: 16px;
+  }
+  
+  #playButton {
+    font-size: 16px;
+    height: 50px;
+    width: 316px;
+  }
+</style>
+
+<h1>Tic-Tac-Toe</h1>
+
+<button id="button1" type="submit"></button>
+<button id="button2" type="submit"></button>
+<button id="button3" type="submit"></button>
+
+<br />
+
+<button id="button4" type="submit"></button>
+<button id="button5" type="submit"></button>
+<button id="button6" type="submit"></button>
+
+<br />
+
+<button id="button7" type="submit"></button>
+<button id="button8" type="submit"></button>
+<button id="button9" type="submit"></button>
+
+<button id="playButton" type="submit">Play Again</button>
+
+<p>Next turn:</p>
+<select name="selectTurn" id="selectTurn">
+  <option>O  
+  <option>X 
+</select>
+
+<script type="text/javascript" charset="utf-8">
+  function pickSquare() {
+    
+    if (this.innerHTML != '') {
+      return;
+    }
+    
+    this.innerHTML = selectTurn.value;
+    
+    if (selectTurn.value == "X") {
+      selectTurn.value = "O";
+    } else {
+      selectTurn.value = "X";
+    }
+    
+    checkWin();
+  }
+  
+  function checkWin() {
+    checkCombination(button1, button2, button3);
+    checkCombination(button4, button5, button6);
+    checkCombination(button7, button8, button9);
+    
+    checkCombination(button1, button5, button9);
+    checkCombination(button3, button5, button7);
+  
+    checkCombination(button1, button4, button7);
+    checkCombination(button2, button5, button8);
+    checkCombination(button3, button6, button9);
+  }
+  
+  function checkCombination(b1, b2, b3) {
+    if ((b1.value === b2.value && b2.value === b3.value && b1.value === b3.value) && (b1.innerHTML != "" && b2.innerHTML != "" && b3.innerHTML != "")) {
+      b1.style.background = "limeGreen";
+      b2.style.background = "limeGreen";
+      b3.style.background = "limeGreen";
+    }
+  }
+  
+  function resetGame() {
+    button1.innerHTML = '';
+    button2.innerHTML = '';
+    button3.innerHTML = '';
+    button4.innerHTML = '';
+    button5.innerHTML = '';
+    button6.innerHTML = '';
+    button7.innerHTML = '';
+    button8.innerHTML = '';
+    button9.innerHTML = '';
+    // button1.innerHTML = '';
+    
+    // for(var i = 1; i <= 9; i++) {
+    //   button + i + .innerHTML = '';
+    // }
+    
+    button1.style.background = "";
+    button2.style.background = "";
+    button3.style.background = "";
+    button4.style.background = "";
+    button5.style.background = "";
+    button6.style.background = "";
+    button7.style.background = "";
+    button8.style.background = "";
+    button9.style.background = "";
+    
+  }
+  
+  button1.onclick = pickSquare;
+  button2.onclick = pickSquare;
+  button3.onclick = pickSquare;
+  button4.onclick = pickSquare;
+  button5.onclick = pickSquare;
+  button6.onclick = pickSquare;
+  button7.onclick = pickSquare;
+  button8.onclick = pickSquare;
+  button9.onclick = pickSquare;
+  // button1.onclick = pickSquare;
+  
+  playButton.onclick = resetGame; 
+</script>
+
